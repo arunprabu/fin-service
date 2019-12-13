@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  dummyText = 'Lorem ipsum elit. Qua, ab officia nam voluptatem tenetur fugiat facere. Quo laudantium dignissimos ab. Ab voluptate aperiam, dolore omnis aut repellendus.';
+
+  today: Date = new Date();
+  
   constructor() {
     console.log('inside constructor');
   }

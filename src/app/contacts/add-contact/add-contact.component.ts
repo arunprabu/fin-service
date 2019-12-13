@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ContactService } from '../contact.service';
+import { Contact } from '../contact';
 
 @Component({
   selector: 'app-add-contact',
@@ -31,17 +32,16 @@ export class AddContactComponent implements OnInit {
     // for Step 3 ref HTML
   }
 
-  addContactHandler() {
+  async addContactHandler() {
     console.log(this.contactForm.value);
 
     // 1. send the above data to service
-    this.contactService.createContact(this.contactForm.value)
-      .subscribe( (res: any) => { // 2. get the resp from service
-        console.log(res);
-        if (res && res.id ) {
-          this.isSaved = true;
-        }
-      });
+    const status: Contact = await this.contactService.createContact(this.contactForm.value);
+    console.log(status);
+
+    if (status && status.id ) {
+      this.isSaved = true;
+    }
 
   }
 

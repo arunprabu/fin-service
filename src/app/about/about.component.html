@@ -1,1 +1,16 @@
-<p>about works!</p>
+<div class="container">
+    <h1>Pipes</h1>
+    <p>{{dummyText}}</p>
+    <p>{{dummyText | uppercase }}</p>
+
+    <p>{{today}}</p>
+    <p>{{today | date }}</p>
+    <p>{{today | date: 'dd/MMMM/yyyy hh:mm:ss a' }}</p>
+
+    <hr>
+    <h2>Custom Pipes</h2>
+    <p>ng g p shared/pipes/ellipsis</p>
+
+    <p>{{dummyText | ellipsis }}</p>
+    <p>{{dummyText | ellipsis: 64 }}</p>
+</div>
