@@ -41,10 +41,6 @@
             Will appear in red
         </div>
 
-        <div [class]="redText">
-            Will not appear in red as no such variable in ts
-        </div>
-
         <div [ngClass]="{'redText alert alert-danger': !isAuth(), 'greenText alert alert-success': isAuth() }">
             Some random message
         </div>
