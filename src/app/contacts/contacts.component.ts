@@ -32,10 +32,10 @@ export class ContactsComponent implements OnInit, OnDestroy {
       });
   }
 
-  // showQuickView( qvContactData ) {
-  //   this.qvContactData = qvContactData;
-  //   $('#quickViewModal').modal('show');
-  // }
+  showQuickView( qvContactData ) {
+    this.qvContactData = qvContactData;
+    $('#quickViewModal').modal('show');
+  }
 
   // will fire when you navigate away from this component 
   ngOnDestroy() {
